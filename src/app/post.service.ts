@@ -46,6 +46,7 @@ export class PostsService {
         {
           headers: new HttpHeaders({ "Custom-Header": "Hello" }),
           params: searchParams,
+          responseType: "json",
         }
       )
       .pipe(
@@ -70,6 +71,7 @@ export class PostsService {
         "https://angular-complete-7851f-default-rtdb.firebaseio.com/posts.json",
         {
           observe: "events",
+          responseType: "text",
         }
       )
       .pipe(
